@@ -30,40 +30,43 @@
   </p>
   <div class="container py-5">
     <div class="row" *ngIf="categoris">
-        <div class="col-md-2"></div>
-        <div class="col-md-2">
-            <div class="contentCate">
-                <img class="imageCate" src="./assets/images/electro.jfif" alt="">
-                <a [routerLink]="['/category', keyword]" >
-                    <h5 (click)="getcate($event)" >{{categoris[0]}}</h5>
-                </a>
-                
+        <!-- <div class="col-md-2"></div> -->
+        
+            <div class="col-lg-3 col-md-6 ">
+                <div class="contentCate m-sm-auto">
+                    <img class="imageCate" src="./assets/images/electro.jfif" alt="">
+                    <a [routerLink]="['/category', keyword]" >
+                        <h5 (click)="getcate($event)" >{{categoris[0]}}</h5>
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-        <div class="col-md-2">
-            <div class="contentCate">
-                <img class="imageCate" src="./assets/images/jwellery.jpg" alt="">
-                <a [routerLink]="['/category', keyword]" >
-                    <h5 (click)="getcate($event)" >{{categoris[1]}}</h5>
-                </a>
+            <div class="col-lg-3 col-md-6">
+                <div class="contentCate">
+                    <img class="imageCate" src="./assets/images/jwellery.jpg" alt="">
+                    <a [routerLink]="['/category', keyword]" >
+                        <h5 (click)="getcate($event)" >{{categoris[1]}}</h5>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-2">
-            <div class="contentCate">
-                <img class="imageCate" src="./assets/images/man.jpg" alt="">
-                <a [routerLink]="['/category', keyword]" >
-                    <h5 (click)="getcate($event)" >{{categoris[2]}}</h5>
-                </a>
+            <div class="col-lg-3 col-md-6">
+                <div class="contentCate">
+                    <img class="imageCate" src="./assets/images/man.jpg" alt="">
+                    <a [routerLink]="['/category', keyword]" >
+                        <h5 (click)="getcate($event)" >{{categoris[2]}}</h5>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="contentCate">
-                <img class="imageCate" src="./assets/images/womens.webp" alt="">
-                <a [routerLink]="['/category', keyword]" >
-                    <h5 (click)="getcate($event)" >{{categoris[3]}}</h5>
-                </a>
+            <div class="col-lg-3 col-md-6">
+                <div class="contentCate">
+                    <img class="imageCate" src="./assets/images/womens.webp" alt="">
+                    <a [routerLink]="['/category', keyword]" >
+                        <h5 (click)="getcate($event)" >{{categoris[3]}}</h5>
+                    </a>
+                </div>
             </div>
-        </div>
+       
+      
     </div>
   </div>
 </section>

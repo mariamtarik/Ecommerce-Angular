@@ -20,8 +20,8 @@ span{
     background-color: #FFF7F0;
 }
 .imageCate{
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 .price{
@@ -48,3 +48,9 @@ a{
     text-decoration: none;
     color: black;
 }
+@media screen and (max-width: 767px) {
+    .contentCate{
+    width: 25%;
+    margin: auto;
+    }
+  }
