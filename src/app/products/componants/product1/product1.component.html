@@ -1,0 +1,28 @@
+<div class="box">
+  <a [routerLink]="['/details', data.id]">
+    <div class="item w-100">
+      <img class="w-100" src="{{ data.image }}" alt="picture" />
+    </div>
+    <div class="content mt-1">
+      <h4 class="header text-dark pl-2">{{ data.title }}</h4>
+    </div>
+  </a>
+
+  <div
+    class="px-3 mb-2 d-flex justify-content-between align-items-center add-content"
+  >
+    <div class="span">
+      <span>{{ data.price }}LE</span>
+    </div>
+    <button class="btn addTo" *ngIf="!addButton" (click)="addButton = true">
+      Add to card
+    </button>
+    <div class="d-flex w-50" *ngIf="addButton">
+      <input type="number" class="form-control" [(ngModel)]="amount" />
+      <button class="btn btn-dark" (click)="add() ; addButton = false ;">
+        Add
+      </button>
+    
+    </div>
+  </div>
+</div>

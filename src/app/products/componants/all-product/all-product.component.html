@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="mt-4">
+    <div class="text-center">
+      <div>
+        <h1 class="card-h pt-3 text-center">All Products</h1>
+      </div>
+      <div>
+        <p class="card-p text-dark text-center">
+          You can find all product you may want
+          <i class="fa-solid fa-cart-arrow-down"></i>
+        </p>
+      </div>
+    </div>
+
+    <div class="find-product d-flex justify-content-center mt-1">
+      <input
+        type="text"
+        (keyup)="search($event)"
+        placeholder="Find your product..."
+      />
+    </div>
+    <div class="my-4 w-25 pr-3 text">
+      <app-select
+        [data]="categoris"
+        [title]="'categories'"
+        (selectedValue)="filterCategory($event)"
+      ></app-select>
+    </div>
+    <div class="row" *ngIf="!loading && !filteredData.length">
+      <div *ngFor="let product of products" class="col-md-3 col-sm-12 my-3">
+        <app-product1
+          [data]="product"
+          (item)="addToCart($event)"
+        ></app-product1>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="filteredData.length" class="row">
+    <div *ngFor="let product of filteredData" class="col-md-3 col-sm-12 my-3">
+      <app-product1 [data]="product" (item)="addToCart($event)"></app-product1>
+    </div>
+  </div>
+
+  <div
+    class="text-center w-100 d-flex align-items-center justify-content-center"
+    *ngIf="loading"
+  >
+    <app-spinner></app-spinner>
+  </div>
+
+</div>
